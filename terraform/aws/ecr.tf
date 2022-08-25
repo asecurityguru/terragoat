@@ -22,9 +22,6 @@ locals {
 
 
 resource null_resource "push_image" {
-  image_scanning_configuration {
-    scan_on_push = true
-  }
   provisioner "local-exec" {
     working_dir = "${path.module}/resources"
     command     = <<BASH
